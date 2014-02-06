@@ -24,6 +24,7 @@
 
 <body>
 
+<!-- coinflow.io side bar -->
 <nav id="sidebar" class="sidebar">
     <ul id="side-nav" class="side-nav">
         <li class="active">
@@ -138,6 +139,181 @@
     </ul>
    
 </nav>
+
+
+<!-- Main Wrapper -->
+<div class="wrap">
+	<header class="page-header">
+        <div class="navbar">
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li class="visible-phone-landscape">
+                        <a id="search-toggle" href="#">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" id="messages" title="Messages" href="#">
+                            <i class="fa fa-comments"></i>
+                        </a>
+                        <ul role="menu" class="dropdown-menu messages" id="messages-menu">
+                            <li role="presentation">
+                                <a class="message" href="#">
+                                    <img alt="" src="img/1.jpg">
+                                    <div class="details">
+                                        <div class="sender">Jane Hew</div>
+                                        <div class="text">
+                                            Hey, John! How is it going? ...
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="message" href="#">
+                                    <img alt="" src="img/2.jpg">
+                                    <div class="details">
+                                        <div class="sender">Alies Rumiancaŭ</div>
+                                        <div class="text">
+                                            I'll definitely buy this template
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="message" href="#">
+                                    <img alt="" src="img/3.jpg">
+                                    <div class="details">
+                                        <div class="sender">Michał Rumiancaŭ</div>
+                                        <div class="text">
+                                            Is it really Lore ipsum? Lore ...
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="text-align-center see-all" href="#">
+                                    See all messages <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" title="8 support tickets" href="#">
+                            <i class="fa fa-group"></i>
+                            <span class="count">8</span>
+                        </a>
+                        <ul role="menu" class="dropdown-menu support" id="support-menu">
+                            <li role="presentation">
+                                <a class="support-ticket" href="#">
+                                    <div class="picture">
+                                        <span class="label label-important"><i class="fa fa-bell-o"></i></span>
+                                    </div>
+                                    <div class="details">
+                                        Check out this awesome ticket
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="support-ticket" href="#">
+                                    <div class="picture">
+                                        <span class="label label-warning"><i class="fa fa-question-circle"></i></span>
+                                    </div>
+                                    <div class="details">
+                                        "What is the best way to get ...
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="support-ticket" href="#">
+                                    <div class="picture">
+                                        <span class="label label-success"><i class="fa fa-tag"></i></span>
+                                    </div>
+                                    <div class="details">
+                                        This is just a simple notification
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="support-ticket" href="#">
+                                    <div class="picture">
+                                        <span class="label label-info"><i class="fa fa-info-circle"></i></span>
+                                    </div>
+                                    <div class="details">
+                                        12 new orders has arrived today
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="support-ticket" href="#">
+                                    <div class="picture">
+                                        <span class="label label-important"><i class="fa fa-plus"></i></span>
+                                    </div>
+                                    <div class="details">
+                                        One more thing that just happened
+                                    </div>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="text-align-center see-all" href="#">
+                                    See all tickets <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="hidden-xs">
+                        <a data-placement="bottom" data-toggle="popover" title="" id="settings" href="#" data-original-title="Settings">
+                            <i class="fa fa-cog"></i>
+                        </a>
+                    </li>
+                    <li class="hidden-xs dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" id="account" title="Account" href="#">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <ul role="menu" class="dropdown-menu account" id="account-menu">
+                            <li class="account-picture" role="presentation">
+                                <img alt="" src="img/2.jpg">
+                                Philip Daineka
+                            </li>
+                            <li role="presentation">
+                                <a class="link" href="form_account.html">
+                                    <i class="fa fa-user"></i>
+                                    Profile
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="link" href="component_calendar.html">
+                                    <i class="fa fa-calendar"></i>
+                                    Calendar
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a class="link" href="#">
+                                    <i class="fa fa-inbox"></i>
+                                    Inbox
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="visible-xs">
+                        <a title="" data-target=".sidebar" data-toggle="collapse" class="btn-navbar" href="#">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
+                </ul>
+                <form role="search" class="navbar-form pull-right" id="search-form">
+                    <input type="search" placeholder="Search..." class="search-query">
+                </form>
+                <div class="notifications pull-right">
+                    <div class="alert pull-right">
+                        <a data-dismiss="alert" class="close" href="#">×</a>
+                        <i class="fa fa-info-circle"></i> Check out Light Blue <a href="#" id="notification-link">settings</a> on the right!
+                    </div>
+                </div>
+        </div>
+    </header>
+
+</div>
 
 
 @yield('main')
