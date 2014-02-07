@@ -4,6 +4,8 @@
  * Main App Controller
  */
  
+ 
+ 
 var app = {
 	
     // Application Constructor
@@ -14,12 +16,18 @@ var app = {
         this.bind_events();
     },
 
-    // Bind any events that are required on startup. Common events are 'load', 'deviceready', 'offline', and 'online'
+    // Bind any events that are required on startup
     bind_events: function() {
-				
+		
+		// Stick the header to the top of the screen
+		//console.log($('header'));
+		$('header').stickUp();	
 		
     }
 };
 
-// Start the main app process
-$(document).ready(app.init.bind(app));
+
+jQuery(function($) {
+	// Start the main app process
+	$(document).ready(app.init.bind(app));
+});

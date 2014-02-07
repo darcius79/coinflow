@@ -4,7 +4,7 @@
 @import url(./fonts/fonts.css);
 @import url(./bootstrap/bootstrap.css);
 
-@import url(../js/vendor/d3/nvd3/src/nv.d3.css);
+/*@import url(../js/vendor/d3/nvd3/src/nv.d3.css);*/
 
 /*** App CSS **********/
 
@@ -52,8 +52,9 @@ a, a:focus {
 header.page-header {
 	position: relative;
  	border: none;
-  	margin: 15px 2.5641% 0;
+  	margin: 15px 0;
   	padding: 0;
+	width: 100%;
 }
 
 header.page-header .navbar {
