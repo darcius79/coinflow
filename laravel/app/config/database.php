@@ -55,12 +55,12 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'database',
-			'username'  => 'root',
-			'password'  => '',
+			'database'  => 'coinflow',
+			'username'  => 'c0inflowu53rZZ',
+			'password'  => 'mbsJX3zwN5GfaHnr',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
+			'prefix'    => 'app_',
 		),
 
 		'pgsql' => array(

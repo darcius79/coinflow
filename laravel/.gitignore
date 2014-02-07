@@ -1,5 +1,7 @@
 /bootstrap/compiled.php
 /vendor
+/config/app.php
+/config/database.php
 composer.phar
 composer.lock
 .env.local.php

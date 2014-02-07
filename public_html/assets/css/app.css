@@ -131,169 +131,29 @@ header.page-header .nav > li.divider {
   	background: linear-gradient(rgba(51, 51, 51, 0), rgba(51, 51, 51, 0.5), rgba(102, 102, 102, 0));
 }
 
-
-
-.page-header .search-query {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  min-height: 0;
-  padding: 4px 14px;
-  color: #f8f8f8;
-  border: none;
-  background: url(../img/search-white.png) 5px 5px no-repeat rgba(51, 51, 51, 0.4);
-  padding-left: 26px;
-  -webkit-transition: width 0.2s;
-  -moz-transition: width 0.2s;
-  -o-transition: width 0.2s;
-  transition: width 0.2s;
-  width: 100px;
-}
-.page-header .search-query:-moz-placeholder {
-  color: rgba(238, 238, 238, 0.76);
-}
-.page-header .search-query::-moz-placeholder {
-  color: rgba(238, 238, 238, 0.76);
-  opacity: 1;
-}
-.page-header .search-query:-ms-input-placeholder {
-  color: rgba(238, 238, 238, 0.76);
-}
-.page-header .search-query::-webkit-input-placeholder {
-  color: rgba(238, 238, 238, 0.76);
-}
-.page-header .search-query:focus {
-  width: 120px;
-}
-.page-header .navbar-form {
-  margin: 5px 15px 0 0;
-  padding: 0;
-  border: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.page-header .navbar-nav {
-  margin: 0;
-}
-.page-header .navbar .nav > li > .dropdown-menu:after {
-  content: '';
-  display: inline-block;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid rgba(51, 51, 51, 0.85);
-  position: absolute;
-  top: -6px;
-  left: 10px;
-}
-.page-header .navbar .pull-right > li > .dropdown-menu,
-.page-header .navbar .nav > li > .dropdown-menu.pull-right {
-  left: auto;
-  right: 0;
-}
-.page-header .navbar .pull-right > li > .dropdown-menu:before,
-.page-header .navbar .nav > li > .dropdown-menu.pull-right:before {
-  left: auto;
-  right: 12px;
-}
-.page-header .navbar .pull-right > li > .dropdown-menu:after,
-.page-header .navbar .nav > li > .dropdown-menu.pull-right:after {
-  left: auto;
-  right: 13px;
-}
-.page-header .navbar .pull-right > li > .dropdown-menu .dropdown-menu,
-.page-header .navbar .nav > li > .dropdown-menu.pull-right .dropdown-menu {
-  left: auto;
-  right: 100%;
-  margin-left: 0;
-  margin-right: -1px;
-  -webkit-border-radius: 6px 0 6px 6px;
-  -moz-border-radius: 6px 0 6px 6px;
-  -ms-border-radius: 6px 0 6px 6px;
-  -o-border-radius: 6px 0 6px 6px;
-  border-radius: 6px 0 6px 6px;
-}
-header.page-header .navbar:after {
-    clear: both;
-}
-
-header.page-header .navbar:before, .navbar:after {
-    content: " ";
-    display: table;
-}
-
 header.page-header .navbar {
-    border: medium none;
-    min-height: 40px;
-}
-
-header.page-header .navbar {
-    margin: 0;
-}
-
-header.page-header .navbar {
-    border-radius: 1px;
-}
-
-header.page-header .navbar {
-    border: 1px solid rgba(0, 0, 0, 0);
-    margin-bottom: 20px;
-    min-height: 50px;
-    position: relative;
-}
-
-header.page-header .navbar .nav:after {
-    clear: both;
-}
-
-header.page-header .navbar .nav:before, .nav:after {
-    content: " ";
-    display: table;
-}
-
-
-header.page-header .notifications {
-  	margin: 6px 20px 6px -40px;
-  	-webkit-transition: margin-top 0.2s ease;
-  	-moz-transition: margin-top 0.2s ease;
-  	-o-transition: margin-top 0.2s ease;
-  	transition: margin-top 0.2s ease;
-	
-}
-
-header.page-header .notifications .alert {
 	position: relative;
-	line-height: 25px;
-  	background: rgba(51, 51, 51, 0.4);
-  	border: none;
-  	font-size: 11.05px;
- 	margin-bottom: 0;
-  	padding: 2px 9px;
-  	color: white;
-  	text-shadow: none;
-  	-webkit-border-radius: 10px;
-  	-moz-border-radius: 10px;
-  	-ms-border-radius: 10px;
-  	-o-border-radius: 10px;
-  	border-radius: 10px;
+	padding-right: 25px;	
 }
 
-header.page-header .notifications .alert .fa {
-	position: relative;
-	font-size: 14px;
-	top: 1px;
-	color: #fffacf;
+header.page-header .navbar .nav > li > .dropdown-menu:after {
+  	content: '';
+  	display: inline-block;
+  	border-left: 6px solid transparent;
+  	border-right: 6px solid transparent;
+  	border-bottom: 6px solid rgba(51, 51, 51, 0.85);
+  	position: absolute;
+  	top: -6px;
+  	left: 10px;
 }
 
-header.page-header .notifications .alert a {
-  	color: white;
-  	font-weight: bold;
+header.page-header .navbar .pull-right > li > .dropdown-menu:after,
+header.page-header .navbar .nav > li > .dropdown-menu.pull-right:after {
+  	left: auto;
+  	right: 13px;
 }
 
-header.page-header .notifications .close {
-  	position: static;
-  	margin: 1px 0 1px 2px;
-}
+
 
 /*** Labels **********/
 

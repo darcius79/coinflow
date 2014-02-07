@@ -16,7 +16,7 @@
     <!-- JS Bootstrap -->
 	<script src="{{ URL::asset('assets/js/vendor/bootstrap/bootstrap.min.js') }}"></script>
     <!-- Plugins -->
-    <script src="{{ URL::asset('assets/js/vendor/jquery/3rdparty/jquery.stickUp.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/vendor/jquery/3rdparty/jquery.stickUp.min.js') }}"></script>
     <!-- JS Custom -->
     <script src="{{ URL::asset('assets/js/config.js') }}"></script>
     <script src="{{ URL::asset('assets/js/app.js') }}"></script>
@@ -27,15 +27,14 @@
 <body>
 
 <!-- coinflow.io header -->
-
 <header class="page-header">
         <div class="navbar">
                 <ul class="nav navbar-nav navbar-right pull-right">
-                    <li class="visible-phone-landscape">
-                        <a id="search-toggle" href="#">
-                            <i class="fa fa-search"></i>
-                        </a>
-                    </li>
+                    <? if(Sentry::check()) { ?>
+                    	<li><a href="#">Logout User</a></li>
+                    <? }else{ ?>
+                    	<li><a href="#">Login</a></li>
+                    <? } ?>
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" id="messages" title="Messages" href="#">
                             <i class="fa fa-comments"></i>
@@ -179,22 +178,17 @@
                             </li>
                         </ul>
                     </li>
+                    <!-- Toggle siebar nav for mobile icon -->
                     <li class="visible-xs">
                         <a title="" data-target=".sidebar" data-toggle="collapse" class="btn-navbar" href="#">
                             <i class="fa fa-bars"></i>
                         </a>
                     </li>
+                    <!-- Hide logout when viewed on mobile -->
                     <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
+                    
                 </ul>
-                <form role="search" class="navbar-form pull-right" id="search-form">
-                    <input type="search" placeholder="Search..." class="search-query">
-                </form>
-                <div class="notifications pull-right">
-                    <div class="alert pull-right">
-                        <a data-dismiss="alert" class="close" href="#">×</a>
-                        <i class="fa fa-info-circle"></i> Check out Light Blue <a href="#" id="notification-link">settings</a> on the right!
-                    </div>
-                </div>
+               
         </div>
     </header>
 
