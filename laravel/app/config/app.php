@@ -53,6 +53,10 @@ return array(
 	*/
 
 	'locale' => 'en',
+	'locale_supported' => array('en', 
+								'zh-cn' // Chinese - China
+							), 
+	
 
 	/*
 	|--------------------------------------------------------------------------

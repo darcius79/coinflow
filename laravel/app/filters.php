@@ -13,7 +13,21 @@
 
 App::before(function($request)
 {
-	//
+	// Create a singleton of any current logged in user (global) object
+    App::singleton('appUser', function(){
+        $app = new stdClass;
+		if(Sentry::check()) {
+			// Get the current active/logged in user
+			$app->user = Sentry::getUser();
+			$app->loggedIn = TRUE;
+		}else{
+			$app->loggedIn = FALSE;
+		}
+        return $app;
+    });
+	// Share the instance across views/controllers
+    $app = App::make('appUser');
+    View::share('appUser', $app);
 });
 
 

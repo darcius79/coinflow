@@ -46,6 +46,21 @@ a, a:focus {
     margin-left: 185px;
 }
 
+/* Great alternative to floats, works in all browsers and has numerous benefits */
+.inline {
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;	
+}
+
+/*** Common Colours *******/
+
+.orange {
+	color: #E5603B;	
+}
+
 
 /*** Header **********/
 
@@ -57,12 +72,25 @@ header.page-header {
 	width: 100%;
 }
 
+header.page-header #logo {
+	position: relative;
+	left: -122px;	
+	line-height: 36px;
+	color: #fff;
+	font-weight: 600;
+	font-size: 16px;
+}
+
 header.page-header .navbar {
 	position: relative;
   	min-height: 40px;
   	border: none;
 	background-color: transparent;
   	color: rgba(51, 51, 51, 0.5);
+}
+
+header.page-header .navbar-right:last-child {
+	margin-right: 0;
 }
 
 header.page-header .navbar .nav li.dropdown > .dropdown-toggle {
@@ -86,10 +114,18 @@ header.page-header .nav > li {
   	float: left;
 }
 
+header.page-header .nav > li .text {
+  	position: relative;
+  	font-size: 14px;
+	font-weight: 600;
+}
+
+
+
 header.page-header .nav > li > a {
 	position: relative;
   	color: rgba(51, 51, 51, 0.5);
-  	width: 40px;
+  	min-width: 40px;
   	padding: 0;
   	font-size: 19.5px;
   	outline: 0;

@@ -17,8 +17,30 @@ ClassLoader::addDirectories(array(
 	app_path().'/controllers',
 	app_path().'/models',
 	app_path().'/database/seeds',
+	app_path().'/libraries',
 
 ));
+
+/*
+|--------------------------------------------------------------------------
+| Localization
+|--------------------------------------------------------------------------
+|
+| I set this up, so the correct language file is loaded depending on 
+| the subdomain eg ch.coinflow.io = chinese
+|
+*/
+
+$languages = Config::get('app.locale_supported');
+$host = $_SERVER['HTTP_HOST'];
+$host = explode('.',$host);
+$num = count($host);
+if($num==3){
+    $lang = strtolower($host[0]);
+    if(in_array($lang,$languages)){
+		App::setLocale($lang);
+    }   
+}
 
 /*
 |--------------------------------------------------------------------------
