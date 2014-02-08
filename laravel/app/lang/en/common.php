@@ -9,8 +9,9 @@ return array(
 	*/
 
 	//*** Header ***************/
-	'login' 		=> 'Login',
-	'logout'    	=> 'Logout',
-	'register'    	=> 'Register',
+	'login' 			=> 'Login',
+	'logout'    		=> 'Logout',
+	'register'    		=> 'Register',
+	'quick_jump'    	=> 'Quick Jump',
 
 );

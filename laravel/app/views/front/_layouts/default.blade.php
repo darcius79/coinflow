@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Crypt Index</title>
+    <title><?=Config::get('app.site_name')?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <!-- Favicon -->
@@ -14,7 +14,7 @@
     <!-- JS -->
 	<script src="{{ URL::asset('assets/js/vendor/jquery/jquery-2.1.0.min.js') }}"></script>
     <!-- JS Bootstrap -->
-	<script src="{{ URL::asset('assets/js/vendor/bootstrap/bootstrap.min.js') }}"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
     <!-- Plugins -->
     <script src="{{ URL::asset('assets/js/vendor/jquery/3rdparty/jquery.stickUp.min.js') }}"></script>
     <!-- JS Custom -->
@@ -36,8 +36,8 @@
             <a href="index.html"><i class="fa fa-home"></i> <span class="name">Dashboard</span></a>
         </li>
         <li class="panel">
-            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#forms-collapse"><i class="fa fa-edit"></i> <span class="name">Forms</span></a>
-            <ul id="forms-collapse" class="panel-collapse collapse">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#markets-collapse"><i class="fa fa-bar-chart-o"></i> <span class="name">Markets</span></a>
+            <ul id="markets-collapse" class="panel-collapse collapse">
                 <li><a href="form_account.html">Account</a></li>
                 <li><a href="form_article.html">Article</a></li>
                 <li><a href="form_elements.html">Elements</a></li>
@@ -46,28 +46,40 @@
             </ul>
         </li>
         <li class="panel">
-            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#stats-collapse"><i class="fa fa-bar-chart-o"></i> <span class="name">Statistics</span></a>
-            <ul id="stats-collapse" class="panel-collapse collapse">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#balances-collapse"><i class="fa fa-dollar pad"></i> <span class="name">Balances</span></a>
+            <ul id="balances-collapse" class="panel-collapse collapse">
+                <li><a href="form_account.html">Account</a></li>
+                <li><a href="form_article.html">Article</a></li>
+                <li><a href="form_elements.html">Elements</a></li>
+                <li><a href="form_validation.html">Validation</a></li>
+                <li><a href="form_wizard.html">Wizard</a></li>
+            </ul>
+        </li>
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#orders-collapse"><i class="fa fa-book"></i> <span class="name">Open Orders &nbsp;<span class="label label-success">17</span></span></a>
+            <ul id="orders-collapse" class="panel-collapse collapse">
                 <li><a href="stat_statistics.html">Stats</a></li>
                 <li><a href="stat_charts.html">Charts</a></li>
                 <li><a href="stat_realtime.html">Realtime</a></li>
             </ul>
         </li>
-        <li class="panel">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#ui-collapse"><i class="fa fa-magic"></i> <span class="name">User Interface</span></a>
-            <ul id="ui-collapse" class="panel-collapse collapse">
-                <li><a href="ui_buttons.html">Buttons</a></li>
-                <li><a href="ui_dialogs.html">Dialogs</a></li>
-                <li><a href="ui_icons.html">Icons</a></li>
-                <li><a href="ui_tabs.html">Tabs</a></li>
-                <li><a href="ui_accordion.html">Accordion</a></li>
+         <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#trading-collapse"><i class="fa fa-group"></i> <span class="name">Trading <span class="label label-success">7</span></span></a>
+            <ul id="trading-collapse" class="panel-collapse collapse">
+                <li><a href="ui_buttons.html">Recent <span class="label label-important">7</span></a></li>
+                <li><a href="ui_buttons.html">History <span class="label label-important">7</span></a></li>
             </ul>
         </li>
         <li class="panel">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#components-collapse"><i class="fa fa-bookmark-o"></i> <span class="name">Components</span></a>
-            <ul id="components-collapse" class="panel-collapse collapse">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#fave-collapse"><i class="fa fa-bookmark pad-s"></i> <span class="name">Favourites</span></a>
+            <ul id="fave-collapse" class="panel-collapse collapse">
+                <li><a href="ui_buttons.html">Buttons</a></li>
+            </ul>
+        </li>
+      
+        <li class="panel">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#faq-collapse"><i class="fa fa-comment"></i> <span class="name">FAQs</span></a>
+            <ul id="faq-collapse" class="panel-collapse collapse">
                 <li><a href="component_calendar.html">Calendar</a></li>
                 <li><a href="component_maps.html">Maps</a></li>
                 <li><a href="component_gallery.html">Gallery</a></li>
@@ -76,68 +88,16 @@
                 <li><a href="component_list_groups.html">List Groups &nbsp; <span class="label label-important">new</span></a></li>
             </ul>
         </li>
+        
         <li class="panel">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#tables-collapse"><i class="fa fa-table"></i> <span class="name">Tables</span></a>
-            <ul id="tables-collapse" class="panel-collapse collapse">
-                <li><a href="tables_static.html">Static</a></li>
-                <li><a href="tables_dynamic.html">Dynamic</a></li>
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#side-nav" href="#support-collapse"><i class="fa fa-inbox"></i> <span class="name">Support</span></a>
+            <ul id="support-collapse" class="panel-collapse collapse">
+                <li><a href="ui_buttons.html">Buttons</a></li>
             </ul>
         </li>
-        <li class="panel">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#grid-collapse"><i class="fa fa-bars"></i> <span class="name">Grid</span></a>
-            <ul id="grid-collapse" class="panel-collapse collapse">
-                <li><a href="grid.html">Basic</a></li>
-                <li><a href="grid_live.html">Live &nbsp; <span class="label label-important">new</span></a></li>
-            </ul>
-        </li>
-        <li class="panel">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#special-collapse"><i class="fa fa-asterisk"></i> <span class="name">Special</span></a>
-            <ul id="special-collapse" class="panel-collapse collapse">
-                <li><a href="special_search.html">Search</a></li>
-                <li><a href="special_invoice.html">Invoice</a></li>
-                <li><a href="special_inbox.html">Inbox <span class="label label-important">3</span></a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="special_404.html">404</a></li>
-                <li><a href="landing.html">Landing</a></li>
-                <li><a href="white/index.html">White <i class="fa fa-external-link-square"></i></a></li>
-            </ul>
-        </li>
-        <li class="panel">
-            <a class="accordion-toggle collapsed" data-toggle="collapse"
-               data-parent="#side-nav" href="#menu-levels-collapse"><i class="fa fa-code-fork"></i> <span class="name">Menu Levels</span></a>
-            <ul id="menu-levels-collapse" class="panel-collapse collapse">
-                <li><a href="#">Item 1.1</a></li>
-                <li><a href="#">Item 1.2</a></li>
-                <li class="panel">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse"
-                       data-parent="#menu-levels-collapse" href="#sub-menu-1-collapse">Item 1.3</a>
-                    <ul id="sub-menu-1-collapse" class="panel-collapse collapse">
-                        <li class="panel">
-                            <a class="accordion-toggle collapsed" data-toggle="collapse"
-                               data-parent="#sub-menu-1-collapse" href="#sub-menu-3-collapse">Item 2.1</a>
-                            <ul id="sub-menu-3-collapse" class="panel-collapse collapse">
-                                <li><a href="#">Item 3.1</a></li>
-                                <li><a href="#">Item 3.2</a></li>
-                                <li><a href="#">Item 3.3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Item 2.2</a></li>
-                        <li class="panel">
-                            <a class="accordion-toggle collapsed" data-toggle="collapse"
-                               data-parent="#sub-menu-1-collapse" href="#sub-menu-2-collapse">Item 2.3</a>
-                            <ul id="sub-menu-2-collapse" class="panel-collapse collapse">
-                                <li><a href="#">Item 3.4</a></li>
-                                <li><a href="#">Item 3.5</a></li>
-                                <li><a href="#">Item 3.6</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
+      
+        
+       
         <li class="visible-xs">
             <a href="login.html"><i class="fa fa-sign-out"></i> <span class="name">Sign Out</span></a>
         </li>
@@ -151,8 +111,74 @@
 	<!-- coinflow.io header -->
 <header class="page-header">
         <div class="navbar">
-        		<div id="logo" class="pull-left">coinflow.io</div>
+        		<div id="logo" class="pull-left"><?=Config::get('app.site_name')?><div class="beta inline">beta</div></div>
                 <ul class="nav navbar-nav navbar-right pull-right">
+                	 <li class="hidden-xs dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" id="quick-jump" title="Quick Jump" href="#">
+                                <i class="fa fa-ellipsis-v"></i> <div class="text inline"><?=trans('common.quick_jump')?></div>
+                            </a>
+                            <ul role="menu" class="dropdown-menu quick-jump" id="quick-jump-menu">
+                                <li class="cat" role="presentation">
+                                    <i class="fa  fa-sort-down"></i>Trending Markets
+                                </li>
+                                <li role="presentation">
+                                    <a class="link" href="form_account.html">
+                                        <i class="fa fa-user"></i>
+                                        Profile
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="link" href="component_calendar.html">
+                                        <i class="fa fa-calendar"></i>
+                                        Calendar
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="link" href="#">
+                                        <i class="fa fa-inbox"></i>
+                                        Inbox
+                                    </a>
+                                </li>
+                                <li class="cat" role="presentation">
+                                    <i class="fa  fa-sort-down"></i>Recent Markets
+                                </li>
+                                <li role="presentation">
+                                    <a class="link" href="form_account.html">
+                                        <i class="fa fa-user"></i>
+                                        Profile
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="link" href="component_calendar.html">
+                                        <i class="fa fa-calendar"></i>
+                                        Calendar
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="link" href="#">
+                                        <i class="fa fa-inbox"></i>
+                                        Inbox
+                                    </a>
+                                </li>
+                                <li class="cat" role="presentation">
+                                    <i class="fa  fa-sort-down"></i>Open Orders
+                                </li>
+                                <li role="presentation">
+                                    <a class="link" href="form_account.html">
+                                        <i class="fa fa-user"></i>
+                                        Profile
+                                    </a>
+                                </li>
+                                <li role="presentation">
+                                    <a class="link" href="component_calendar.html">
+                                        <i class="fa fa-calendar"></i>
+                                        Calendar
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+                	<li class="divider"></li>
                     <? if($appUser->loggedIn) { ?>
                             <li><a href="#"><?=trans('common.logout')?> <?=$appUser->user->fname?></a></li>
                             <li class="dropdown">
@@ -308,7 +334,6 @@
                         <li class="hidden-xs"><a href="login.html"><i class="fa fa-sign-out"></i></a></li>
                     <? }else{ ?>
                     	<li><a href="#"><i class="fa fa-sign-in"></i> <div class="text inline"><?=trans('common.login')?></div></a></li>
-                        <li class="divider"></li>
                         <li><a href="#"><i class="fa fa-user"></i> <div class="text inline"><?=trans('common.register')?></div></a></li>
                     <? } ?>
                    

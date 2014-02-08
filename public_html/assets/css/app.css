@@ -55,6 +55,129 @@ a, a:focus {
 	*display: inline;	
 }
 
+/*** Buttons **************/
+
+.btn-default {
+    background-image: linear-gradient(#FFFFFF, #FFFFFF 60%, #F5F5F5);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #E6E6E6;
+    filter: none;
+}
+
+.btn-success {
+    background-image: linear-gradient(#88C149, #73A839 60%, #699934);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #59822C;
+    filter: none;
+}
+
+.btn-primary {
+    background-image: linear-gradient(#54B4EB, #2FA4E7 60%, #1D9CE5);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #178ACC;
+    filter: none;
+}
+
+.btn-info {
+    background-image: linear-gradient(#04519B, #033C73 60%, #02325F);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #022241;
+    filter: none;
+}
+
+.btn-warning {
+    background-image: linear-gradient(#FF6707, #DD5600 60%, #C94E00);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #AA4200;
+    filter: none;
+}
+
+.btn-danger {
+    background-image: linear-gradient(#E12B31, #C71C22 60%, #B5191F);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #9A161A;
+    filter: none;
+}
+
+.btn {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+    background-color: #73A839;
+    border-color: #73A839;
+    color: #FFFFFF;
+}
+
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 8px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+
+/*** Labels **************/
+
+.label, .badge {
+    -moz-box-sizing: content-box;
+    display: inline-block;
+    font-size: 11.05px;
+    font-weight: 300;
+    line-height: 14px;
+    padding: 2px 4px;
+    text-shadow: none;
+}
+
+.label-default {
+    background-color: #999999;
+}
+
+.label-primary {
+    background-color: #2FA4E7;
+}
+
+.label-success {
+    background-color: #73A839;
+}
+
+.label-warning {
+    background-color: #DD5600;
+}
+
+.label-danger {
+    background-color: #C71C22;
+}
+
+.label-info {
+    background-color: #033C73;
+}
+
+
+.label {
+    border-radius: 0.25em;
+    color: #FFFFFF;
+    display: inline;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0.2em 0.6em 0.3em;
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+
 /*** Common Colours *******/
 
 .orange {
@@ -75,10 +198,19 @@ header.page-header {
 header.page-header #logo {
 	position: relative;
 	left: -122px;	
-	line-height: 36px;
+	top: 15px;
 	color: #fff;
 	font-weight: 600;
 	font-size: 16px;
+	text-align: center;
+}
+
+header.page-header #logo .beta {
+	position: relative;
+	font-size: 12px;
+	color: #96A38D;
+	padding-top: 15px;
+	font-weight: normal;
 }
 
 header.page-header .navbar {
@@ -88,6 +220,7 @@ header.page-header .navbar {
 	background-color: transparent;
   	color: rgba(51, 51, 51, 0.5);
 }
+
 
 header.page-header .navbar-right:last-child {
 	margin-right: 0;
@@ -118,8 +251,12 @@ header.page-header .nav > li .text {
   	position: relative;
   	font-size: 14px;
 	font-weight: 600;
+	margin-right: 15px;
 }
 
+header.page-header .nav > li #quick-jump .text {
+  	margin-right: 0;
+}
 
 
 header.page-header .nav > li > a {
@@ -136,8 +273,19 @@ header.page-header .nav > li > a {
   	text-shadow: none;
 }
 
+header.page-header .nav > li > a .fa {
+	position: relative;
+	font-size: 18px;
+	top: -1px;
+}
+
 header.page-header .nav > li > a:hover {
-  color: white;
+  	color: white;
+	-webkit-transition: color 0.3s ease-out;
+	-moz-transition: color 0.3s ease-out;
+	-ms-transition: color 0.3s ease-out;
+	-o-transition: color 0.3s ease-out;
+	transition: color 0.3s ease-out;
 }
 
 header.page-header .nav > li .count {
@@ -172,6 +320,63 @@ header.page-header .navbar {
 	padding-right: 25px;	
 }
 
+header.page-header .navbar .nav > li >  .dropdown-menu {
+    background: none repeat scroll 0 0 rgba(51, 51, 51, 0.65);
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #FFFFFF;
+	padding: 12px;
+	-webkit-box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.1);
+	box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.1);
+	font-size: 13px;
+}
+
+header.page-header .navbar .nav > li > .dropdown-menu  a {
+	color: #F9F9F9;	
+	padding: 6px 10px;
+}
+
+header.page-header .navbar .nav > li > .dropdown-menu > li a:hover {
+    color: inherit;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    text-decoration: none;
+    background: rgba(0, 0, 0, .15);
+   
+}
+
+header.page-header .navbar .nav > li > .dropdown-menu .fa {
+	margin-right: 6px;	
+}
+
+header.page-header .navbar .nav > li > .dropdown-menu > li.cat {
+	position: relative;
+	border-bottom: 1px solid #474B4C;
+	border-top: 1px solid #474B4C;
+	font-weight: 600;
+	padding: 6px 0;
+	margin: 6px 0;
+}
+
+header.page-header .navbar .nav > li > .dropdown-menu > li.cat:first-child {
+	border-top: 0;
+	padding-top: 0;
+	margin-top: 2px;
+}
+
+header.page-header .navbar .nav > li > .dropdown-menu > li.cat .fa {
+	color: #E5603B;
+	position: relative;
+	top: -2px;
+}
+
+
+
+
+
 header.page-header .navbar .nav > li > .dropdown-menu:after {
   	content: '';
   	display: inline-block;
@@ -191,34 +396,6 @@ header.page-header .navbar .nav > li > .dropdown-menu.pull-right:after {
 
 
 
-/*** Labels **********/
-
-.label, .badge {
-    -moz-box-sizing: content-box;
-    display: inline-block;
-    font-size: 11.05px;
-    font-weight: 300;
-    line-height: 14px;
-    padding: 2px 4px;
-    text-shadow: none;
-}
-
-.label-danger, .label-important {
-    background-color: #E5603B;
-}
-
-.label {
-    border-radius: 0.25em;
-    color: #FFFFFF;
-    display: inline;
-    font-size: 75%;
-    font-weight: bold;
-    line-height: 1;
-    padding: 0.2em 0.6em 0.3em;
-    text-align: center;
-    vertical-align: baseline;
-    white-space: nowrap;
-}
 
 /*** Nav *************/
 
@@ -231,7 +408,7 @@ nav.sidebar {
     margin: 80px 0 0 25px;
     padding: 10px 0;
     top: 0;
-    width: 160px;
+    width: 180px;
     z-index: 1;
 }
 
@@ -269,6 +446,14 @@ nav.sidebar .side-nav li i[class*="fa"] {
     float: right;
     font-size: 16.25px;
     line-height: 20px;
+}
+
+nav.sidebar .side-nav li .pad {
+   margin-right: 4px;
+}
+
+nav.sidebar .side-nav li .pad-s {
+   margin-right: 2px;
 }
 
 nav.sidebar .side-nav > li.active > a {

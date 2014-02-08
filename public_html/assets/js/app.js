@@ -20,9 +20,11 @@ var app = {
     bind_events: function() {
 		
 		// Stick the header to the top of the screen
-		//console.log($('header'));
 		$('header').stickUp();	
+		// Animate bootstraps dropdown menu
+		//$('.dropdown-toggle').click(function() { $(this).next('.dropdown-menu').slideToggle(250); });
 		
+
     }
 };
 
